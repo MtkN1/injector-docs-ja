@@ -1,0 +1,541 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Alec Thomas
+# This file is distributed under the same license as the Injector package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Injector 0.22.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 11:35+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../api.rst:2
+msgid "Injector API reference"
+msgstr "Injector API リファレンス"
+
+#: ../../api.rst:6
+msgid "Unless specified otherwise, instance methods are **not** thread safe."
+msgstr "特に指定がない限り、インスタンスメソッドはスレッドセーフでは **ありません**。"
+
+#: ../../api.rst:8
+msgid "The following functions are thread safe:"
+msgstr "次の関数はスレッドセーフです。"
+
+#: ../../api.rst:10
+msgid ":meth:`Injector.get`"
+msgstr ":meth:`Injector.get`"
+
+#: ../../api.rst:11
+msgid "injection provided by :func:`inject` decorator (please note, however, that it doesn't say anything about decorated function thread safety)"
+msgstr ":func:`inject` デコレータによって提供される注入 (ただし、装飾された関数のスレッドセーフティについては何も言及されていません)"
+
+#: injector:1 of
+msgid "Injector - Python dependency injection framework, inspired by Guice"
+msgstr "Injector - Guice に触発された Python 依存性注入フレームワーク"
+
+#: injector of
+msgid "copyright"
+msgstr "著作権"
+
+#: injector:3 of
+msgid "2012 by Alec Thomas"
+msgstr "2012 by Alec Thomas"
+
+#: injector of
+msgid "license"
+msgstr "ライセンス"
+
+#: injector:4 of
+msgid "BSD"
+msgstr "BSD"
+
+#: injector.Binder:1 injector.Injector:1 injector.Module:1 injector.Scope:1 of
+msgid "Bases: :py:class:`object`"
+msgstr "ベース: :py:class:`object`"
+
+#: injector.Binder:1 of
+msgid "Bind interfaces to implementations."
+msgstr "インターフェースを実装にバインドします。"
+
+#: injector.Binder:3 of
+msgid "This class is instantiated internally for you and there's no need to instantiate it on your own."
+msgstr "このクラスは内部でインスタンス化されるため、自分でインスタンス化する必要はありません。"
+
+#: injector.Binder.bind:1 of
+msgid "Bind an interface to an implementation."
+msgstr "インターフェースを実装にバインドします。"
+
+#: injector.Binder.bind:3 of
+msgid "Binding `T` to an instance of `T` like"
+msgstr "`T` を `T` のインスタンスにバインドするような"
+
+#: injector.Binder.bind:9 of
+msgid "is, for convenience, a shortcut for"
+msgstr "は、便宜上、次のショートカットです。"
+
+#: injector.Binder.bind:15 of
+msgid "Likewise, binding to a callable like"
+msgstr "同様に、次のような呼び出し可能オブジェクトへのバインド"
+
+#: injector.Binder.bind:21 of
+msgid "is a shortcut for"
+msgstr "は、次のショートカットです。"
+
+#: injector.Binder.bind:27 of
+msgid "and, as such, if `some_callable` there has any annotated parameters they'll be provided automatically without having to use :func:`inject` or :data:`Inject` with the callable."
+msgstr "そのため、`some_callable` に注釈付きパラメータがある場合、呼び出し可能オブジェクトで :func:`inject` または :data:`Inject` を使用しなくても自動的に提供されます。"
+
+#: injector.Binder.bind:30 of
+msgid "`typing.List` and `typing.Dict` instances are reserved for multibindings and trying to bind them here will result in an error (use :meth:`multibind` instead)::"
+msgstr "`typing.List` および `typing.Dict` インスタンスはマルチバインディング用に予約されており、ここでバインドしようとするとエラーが発生します (:meth:`multibind` を代わりに使用してください)::"
+
+#: injector.Binder.bind injector.Binder.multibind injector.Injector
+#: injector.Injector.call_with_injection injector.Injector.get
+#: injector.Scope.get of
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: injector.Binder.bind:35 of
+msgid "Type to bind."
+msgstr "バインドする型。"
+
+#: injector.Binder.bind:36 of
+msgid "Instance or class to bind to, or an instance of :class:`Provider` subclass."
+msgstr "バインドするインスタンスまたはクラス、あるいは :class:`Provider` サブクラスのインスタンス。"
+
+#: injector.Binder.bind:38 of
+msgid "Optional :class:`Scope` in which to bind."
+msgstr "オプションの :class:`Scope` (バインドするスコープ)。"
+
+#: injector.Binder.install:1 of
+msgid "Install a module into this binder."
+msgstr "このバインダーにモジュールをインストールします。"
+
+#: injector.Binder.install:3 of
+msgid "In this context the module is one of the following:"
+msgstr "このコンテキストでは、モジュールは次のいずれかです。"
+
+#: injector.Binder.install:5 of
+msgid "function taking the :class:`Binder` as its only parameter"
+msgstr ":class:`Binder` を唯一のパラメータとして取る関数"
+
+#: injector.Binder.install:14 of
+msgid "instance of :class:`Module` (instance of its subclass counts)"
+msgstr ":class:`Module` のインスタンス (そのサブクラスのインスタンスも含む)"
+
+#: injector.Binder.install:24 of
+msgid "subclass of :class:`Module` - the subclass needs to be instantiable so if it expects any parameters they need to be injected"
+msgstr ":class:`Module` のサブクラス - サブクラスはインスタンス化可能である必要があるため、パラメータを期待する場合は注入する必要があります"
+
+#: injector.Binder.multibind:1 of
+msgid "Creates or extends a multi-binding."
+msgstr "マルチバインディングを作成または拡張します。"
+
+#: injector.Binder.multibind:3 of
+msgid "A multi-binding contributes values to a list or to a dictionary. For example::"
+msgstr "マルチバインディングは、リストまたは辞書に値を提供します。例::"
+
+#: injector.Binder.multibind:13 of
+msgid "Added support for using `typing.Dict` and `typing.List` instances as interfaces. Deprecated support for `MappingKey`, `SequenceKey` and single-item lists and dictionaries as interfaces."
+msgstr "インターフェースとして `typing.Dict` および `typing.List` インスタンスを使用するためのサポートを追加しました。インターフェースとしての `MappingKey`、`SequenceKey` および単一アイテムのリストと辞書のサポートは非推奨になりました。"
+
+#: injector.Binder.multibind:18 of
+msgid "typing.Dict or typing.List instance to bind to."
+msgstr "バインドする typing.Dict または typing.List インスタンス。"
+
+#: injector.Binder.multibind:19 of
+msgid "Instance, class to bind to, or an explicit :class:`Provider` subclass. Must provide a list or a dictionary, depending on the interface."
+msgstr "バインドするインスタンス、クラス、または明示的な :class:`Provider` サブクラス。インターフェースに応じて、リストまたは辞書を提供する必要があります。"
+
+#: injector.Binder.multibind:21 of
+msgid "Optional Scope in which to bind."
+msgstr "オプションのスコープ (バインドするスコープ)。"
+
+#: injector.BoundKey:1 of
+msgid "Bases: :py:class:`tuple`"
+msgstr "ベース: :py:class:`tuple`"
+
+#: injector.BoundKey:1 of
+msgid "A BoundKey provides a key to a type with pre-injected arguments."
+msgstr "BoundKey は、事前に注入された引数を持つ型へのキーを提供します。"
+
+#: injector.CallError:1 injector.CircularDependency:1
+#: injector.UnknownArgument:1 injector.UnknownProvider:1
+#: injector.UnsatisfiedRequirement:1 of
+msgid "Bases: :py:class:`~injector.Error`"
+msgstr "ベース: :py:class:`~injector.Error`"
+
+#: injector.CallError:1 of
+msgid "Call to callable object fails."
+msgstr "呼び出し可能オブジェクトの呼び出しに失敗しました。"
+
+#: injector.CallableProvider:1 injector.ClassProvider:1
+#: injector.InstanceProvider:1 of
+msgid "Bases: :py:class:`~injector.Provider`, :py:class:`~typing.Generic`\ [:py:obj:`~injector.T`]" 
+msgstr "ベース: :py:class:`~injector.Provider`, :py:class:`~typing.Generic`\ [:py:obj:`~injector.T`]"
+
+#: injector.CallableProvider:1 of
+msgid "Provides something using a callable."
+msgstr "呼び出し可能オブジェクトを使用して何かを提供します。"
+
+#: injector.CallableProvider:3 of
+msgid "The callable is called every time new value is requested from the provider."
+msgstr "プロバイダーから新しい値が要求されるたびに、呼び出し可能オブジェクトが呼び出されます。"
+
+#: injector.CallableProvider:5 of
+msgid "There's no need to explicitly use :func:`inject` or :data:`Inject` with the callable as it's assumed that, if the callable has annotated parameters, they're meant to be provided automatically. It wouldn't make sense any other way, as there's no mechanism to provide parameters to the callable at a later time, so either they'll be injected or there'll be a `CallError`."
+msgstr "呼び出し可能オブジェクトに注釈付きパラメータがある場合、それらは自動的に提供されると想定されるため、呼び出し可能オブジェクトで :func:`inject` または :data:`Inject` を明示的に使用する必要はありません。後で呼び出し可能オブジェクトにパラメータを提供するメカニズムはないため、他の方法では意味がありません。したがって、注入されるか、`CallError` が発生します。"
+
+#: injector.CircularDependency:1 of
+msgid "Circular dependency detected."
+msgstr "循環依存が検出されました。"
+
+#: injector.ClassProvider:1 of
+msgid "Provides instances from a given class, created using an Injector."
+msgstr "Injector を使用して作成された、指定されたクラスのインスタンスを提供します。"
+
+#: injector.Error:1 of
+msgid "Bases: :py:class:`Exception`"
+msgstr "ベース: :py:class:`Exception`"
+
+#: injector.Error:1 of
+msgid "Base exception."
+msgstr "基本例外。"
+
+#: ../../../docstring of typing.Annotated:1
+msgid "An experimental way to declare injectable dependencies utilizing a `PEP 593`_ implementation in Python 3.9 and backported to Python 3.7+ in `typing_extensions`."
+msgstr "Python 3.9 の `PEP 593`_ 実装を利用し、`typing_extensions` で Python 3.7 以降にバックポートされた、注入可能な依存関係を宣言する実験的な方法。"
+
+#: ../../../docstring of typing.Annotated:4
+msgid "Those two declarations are equivalent::"
+msgstr "これらの 2 つの宣言は同等です::"
+
+#: ../../../docstring of typing.Annotated:13
+msgid "The advantage over using :func:`inject` is that if you have some noninjectable parameters it may be easier to spot what are they. Those two are equivalent::"
+msgstr ":func:`inject` を使用するよりも利点があるのは、注入不可能なパラメータがある場合に、それらが何であるかを簡単に見つけられることです。これら 2 つは同等です::"
+
+#: ../../../docstring injector.inject:50 injector.noninjectable:28 of
+#: typing.Annotated:25 typing.Annotated:26
+msgid "Function :func:`get_bindings`"
+msgstr "関数 :func:`get_bindings`"
+
+#: ../../../docstring injector.inject:51 injector.noninjectable:29 of
+#: typing.Annotated:26 typing.Annotated:27
+msgid "A way to inspect how various injection declarations interact with each other."
+msgstr "さまざまな注入宣言が相互にどのように作用するかを検査する方法。"
+
+#: ../../../docstring of typing.Annotated:29 typing.Annotated:30
+msgid "Requires Python 3.7+."
+msgstr "Python 3.7 以降が必要です。"
+
+#: ../../../docstring of typing.Annotated:32 typing.Annotated:33
+msgid "If you're using mypy you need the version 0.750 or newer to fully type-check code using this construct."
+msgstr "mypy を使用している場合は、この構成体を使用するコードを完全に型チェックするためにバージョン 0.750 以降が必要です。"
+
+#: injector.Injector:1 of
+msgid "Optional - a configuration module or iterable of configuration modules. Each module will be installed in current :class:`Binder` using :meth:`Binder.install`.  Consult :meth:`Binder.install` documentation for the details."
+msgstr "オプション - 設定モジュールまたは設定モジュールのイテラブル。各モジュールは、:meth:`Binder.install` を使用して現在の :class:`Binder` にインストールされます。詳細については、:meth:`Binder.install` のドキュメントを参照してください。"
+
+#: injector.Injector:1 of
+msgid "Optional - a configuration module or iterable of configuration modules. Each module will be installed in current :class:`Binder` using :meth:`Binder.install`."
+msgstr "オプション - 設定モジュールまたは設定モジュールのイテラブル。各モジュールは、:meth:`Binder.install` を使用して現在の :class:`Binder` にインストールされます。"
+
+#: injector.Injector:4 of
+msgid "Consult :meth:`Binder.install` documentation for the details."
+msgstr "詳細については、:meth:`Binder.install` のドキュメントを参照してください。"
+
+#: injector.Injector:6 of
+msgid "Whether to automatically bind missing types."
+msgstr "不足している型を自動的にバインドするかどうか。"
+
+#: injector.Injector:7 of
+msgid "Parent injector."
+msgstr "親インジェクター。"
+
+#: injector.Injector:9 of
+msgid "``use_annotations`` parameter"
+msgstr "``use_annotations`` パラメータ"
+
+#: injector.Injector:12 of
+msgid "``use_annotations`` parameter is removed"
+msgstr "``use_annotations`` パラメータは削除されました"
+
+#: injector.Injector.call_with_injection:1 of
+msgid "Call a callable and provide its dependencies if needed."
+msgstr "呼び出し可能オブジェクトを呼び出し、必要に応じてその依存関係を提供します。"
+
+#: injector.Injector.call_with_injection:3 of
+msgid "Dependencies are provided when the callable is decorated with :func:`@inject <inject>` or some individual parameters are wrapped in :data:`Inject` – otherwise ``call_with_injection()`` is equivalent to just calling the callable directly."
+msgstr "呼び出し可能オブジェクトが :func:`@inject <inject>` で装飾されているか、一部の個々のパラメータが :data:`Inject` でラップされている場合に依存関係が提供されます。それ以外の場合、``call_with_injection()`` は呼び出し可能オブジェクトを直接呼び出すのと同じです。"
+
+#: injector.Injector.call_with_injection:7 of
+msgid "If there is an overlap between arguments provided in ``args`` and ``kwargs`` and injectable dependencies the provided values take precedence and no dependency injection process will take place for the corresponding parameters."
+msgstr "``args`` および ``kwargs`` で提供される引数と注入可能な依存関係の間に重複がある場合、提供された値が優先され、対応するパラメータに対して依存関係の注入プロセスは行われません。"
+
+#: injector.Injector.call_with_injection:11 of
+msgid "Instance of a class callable belongs to if it's a method, None otherwise."
+msgstr "メソッドである場合は呼び出し可能なクラスのインスタンス、それ以外の場合は None。"
+
+#: injector.Injector.call_with_injection:13 of
+msgid "Arguments to pass to callable."
+msgstr "呼び出し可能オブジェクトに渡す引数。"
+
+#: injector.Injector.call_with_injection:14 of
+msgid "Keyword arguments to pass to callable."
+msgstr "呼び出し可能オブジェクトに渡すキーワード引数。"
+
+#: injector.Injector.call_with_injection injector.Injector.get
+#: injector.Scope.get of
+msgid "Returns"
+msgstr "戻り値"
+
+#: injector.Injector.call_with_injection:18 of
+msgid "Value returned by callable."
+msgstr "呼び出し可能オブジェクトによって返される値。"
+
+#: injector.Injector.create_object:1 of
+msgid "Create a new instance, satisfying any dependencies on cls."
+msgstr "cls の依存関係を満たす新しいインスタンスを作成します。"
+
+#: injector.Injector.get:1 of
+msgid "Get an instance of the given interface."
+msgstr "指定されたインターフェースのインスタンスを取得します。"
+
+#: injector.Injector.get:5 of
+msgid "Although this method is part of :class:`Injector`'s public interface it's meant to be used in limited set of circumstances."
+msgstr "このメソッドは :class:`Injector` のパブリックインターフェースの一部ですが、限られた状況で使用することを意図しています。"
+
+#: injector.Injector.get:8 of
+msgid "For example, to create some kind of root object (application object) of your application (note that only one `get` call is needed, inside the `Application` class and any of its dependencies :func:`inject` can and should be used):"
+msgstr "たとえば、アプリケーションのルートオブジェクト (アプリケーションオブジェクト) を作成するには (注: `Application` クラス内で `get` 呼び出しは 1 回だけ必要であり、その依存関係のいずれかで :func:`inject` を使用できますし、使用すべきです):"
+
+#: injector.Injector.get:29 of
+msgid "Interface whose implementation we want."
+msgstr "実装を求めるインターフェース。"
+
+#: injector.Injector.get:30 of
+msgid "Class of the Scope in which to resolve."
+msgstr "解決するスコープのクラス。"
+
+#: injector.Injector.get:31 of
+msgid "An implementation of interface."
+msgstr "インターフェースの実装。"
+
+#: injector.InstanceProvider:1 of
+msgid "Provide a specific instance."
+msgstr "特定のインスタンスを提供します。"
+
+#: injector.Module:1 of
+msgid "Configures injector and providers."
+msgstr "インジェクターとプロバイダーを構成します。"
+
+#: injector.Module.configure:1 of
+msgid "Override to configure bindings."
+msgstr "バインディングを構成するためにオーバーライドします。"
+
+#: ../../../docstring of typing.Annotated:1
+msgid "An experimental way to declare noninjectable dependencies utilizing a `PEP 593`_ implementation in Python 3.9 and backported to Python 3.7+ in `typing_extensions`."
+msgstr "Python 3.9 の `PEP 593`_ 実装を利用し、`typing_extensions` で Python 3.7 以降にバックポートされた、注入不可能な依存関係を宣言する実験的な方法。"
+
+#: ../../../docstring of typing.Annotated:4
+msgid "Since :func:`inject` declares all function's parameters to be injectable there needs to be a way to opt out of it. This has been provided by :func:`noninjectable` but `noninjectable` suffers from two issues:"
+msgstr ":func:`inject` はすべての関数のパラメータを注入可能として宣言するため、それをオプトアウトする方法が必要です。これには :func:`noninjectable` が提供されていますが、`noninjectable` には 2 つの問題があります:"
+
+#: ../../../docstring of typing.Annotated:8
+msgid "You need to repeat the parameter name"
+msgstr "パラメータ名を繰り返す必要があります"
+
+#: ../../../docstring of typing.Annotated:9
+msgid "The declaration may be relatively distance in space from the actual parameter declaration, thus hindering readability"
+msgstr "宣言が実際のパラメータ宣言から比較的離れている可能性があり、可読性が低下します"
+
+#: ../../../docstring of typing.Annotated:12
+msgid "`NoInject` solves both of those concerns, for example (those two declarations are equivalent)::"
+msgstr "`NoInject` はこれらの懸念の両方を解決します。たとえば (これらの 2 つの宣言は同等です)::"
+
+#: injector.NoScope:1 injector.SingletonScope:1 injector.ThreadLocalScope:1 of
+msgid "Bases: :py:class:`~injector.Scope`"
+msgstr "ベース: :py:class:`~injector.Scope`"
+
+#: injector.NoScope:1 of
+msgid "An unscoped provider."
+msgstr "スコープのないプロバイダー。"
+
+#: injector.Provider:1 injector.ProviderOf:1 of
+msgid "Bases: :py:class:`~typing.Generic`\ [:py:obj:`~injector.T`]"
+msgstr "ベース: :py:class:`~typing.Generic`\ [:py:obj:`~injector.T`]"
+
+#: injector.Provider:1 of
+msgid "Provides class instances."
+msgstr "クラスインスタンスを提供します。"
+
+#: injector.ProviderOf:1 of
+msgid "Can be used to get a provider of an interface, for example:"
+msgstr "たとえば、インターフェースのプロバイダーを取得するために使用できます:"
+
+#: injector.ProviderOf.get:1 of
+msgid "Get an implementation for the specified interface."
+msgstr "指定されたインターフェースの実装を取得します。"
+
+#: injector.Scope:1 of
+msgid "A Scope looks up the Provider for a binding."
+msgstr "スコープはバインディングのプロバイダーを検索します。"
+
+#: injector.Scope:3 of
+msgid "By default (ie. :class:`NoScope` ) this simply returns the default :class:`Provider` ."
+msgstr "デフォルトでは (つまり :class:`NoScope` )、これは単にデフォルトの :class:`Provider` を返します。"
+
+#: injector.Scope.configure:1 of
+msgid "Configure the scope."
+msgstr "スコープを構成します。"
+
+#: injector.Scope.get:1 of
+msgid "Get a :class:`Provider` for a key."
+msgstr "キーの :class:`Provider` を取得します。"
+
+#: injector.Scope.get:3 of
+msgid "The key to return a provider for."
+msgstr "プロバイダーを返すためのキー。"
+
+#: injector.Scope.get:4 of
+msgid "The default Provider associated with the key."
+msgstr "キーに関連付けられたデフォルトのプロバイダー。"
+
+#: injector.Scope.get:5 of
+msgid "A Provider instance that can provide an instance of key."
+msgstr "キーのインスタンスを提供できるプロバイダーインスタンス。"
+
+#: injector.SingletonScope:1 of
+msgid "A :class:`Scope` that returns a per-Injector instance for a key."
+msgstr "キーごとにインジェクターインスタンスを返す :class:`Scope`。"
+
+#: injector.SingletonScope:3 of
+msgid ":data:`singleton` can be used as a convenience class decorator."
+msgstr ":data:`singleton` は便利なクラスデコレータとして使用できます。"
+
+#: injector.ThreadLocalScope:1 of
+msgid "A :class:`Scope` that returns a per-thread instance for a key."
+msgstr "キーごとにスレッドごとのインスタンスを返す :class:`Scope`。"
+
+#: injector.UnknownArgument:1 of
+msgid "Tried to mark an unknown argument as noninjectable."
+msgstr "不明な引数を注入不可能としてマークしようとしました。"
+
+#: injector.UnknownProvider:1 of
+msgid "Tried to bind to a type whose provider couldn't be determined."
+msgstr "プロバイダーを特定できない型にバインドしようとしました。"
+
+#: injector.UnsatisfiedRequirement:1 of
+msgid "Requirement could not be satisfied."
+msgstr "要件を満たすことができませんでした。"
+
+#: injector.get_bindings:1 of
+msgid "Get bindings of injectable parameters from a callable."
+msgstr "呼び出し可能オブジェクトから注入可能なパラメータのバインディングを取得します。"
+
+#: injector.get_bindings:3 of
+msgid "If the callable is not decorated with :func:`inject` and does not have any of its parameters declared as injectable using :data:`Inject` an empty dictionary will be returned.  Otherwise the returned dictionary will contain a mapping between parameter names and their types with the exception of parameters excluded from dependency injection (either with :func:`noninjectable`, :data:`NoInject` or only explicit injection with :data:`Inject` being used). For example::"
+msgstr "呼び出し可能オブジェクトが :func:`inject` で装飾されておらず、:data:`Inject` を使用して注入可能として宣言されたパラメータがない場合、空の辞書が返されます。それ以外の場合、返される辞書には、依存関係の注入から除外されたパラメータ ( :func:`noninjectable`、:data:`NoInject` または :data:`Inject` を使用した明示的な注入のみが使用される) を除いて、パラメータ名とその型の間のマッピングが含まれます。例::"
+
+#: injector.get_bindings:61 of
+msgid "This function is used internally so by calling it you can learn what exactly Injector is going to try to provide to a callable."
+msgstr "この関数は内部で使用されるため、呼び出すことで、Injector が呼び出し可能オブジェクトに提供しようとしているものを正確に知ることができます。"
+
+#: injector.inject:1 of
+msgid "Decorator declaring parameters to be injected."
+msgstr "注入されるパラメータを宣言するデコレータ。"
+
+#: injector.inject:3 of
+msgid "eg."
+msgstr "例:"
+
+#: injector.inject:15 of
+msgid "Use the Injector to get a new instance of A:"
+msgstr "Injector を使用して A の新しいインスタンスを取得します:"
+
+#: injector.inject:20 of
+msgid "As a convenience one can decorate a class itself::"
+msgstr "便宜上、クラス自体を装飾することができます::"
+
+#: injector.inject:27 of
+msgid "This is equivalent to decorating its constructor. In particular this provides integration with `dataclasses <https://docs.python.org/3/library/dataclasses.html>`_ (the order of decorator application is important here)::"
+msgstr "これはコンストラクタを装飾するのと同等です。特に、`dataclasses <https://docs.python.org/3/library/dataclasses.html>`_ との統合を提供します (デコレータの適用順序が重要です)::"
+
+#: injector.inject:38 of
+msgid "This decorator is to be used on class constructors (or, as a convenience, on classes). Using it on non-constructor methods worked in the past but it was an implementation detail rather than a design decision."
+msgstr "このデコレータはクラスコンストラクタ (または便宜上、クラス) に使用されます。非コンストラクタメソッドでの使用は過去に機能しましたが、それは設計上の決定ではなく実装の詳細でした。"
+
+#: injector.inject:42 of
+msgid "Third party libraries may, however, provide support for injecting dependencies into non-constructor methods or free functions in one form or another."
+msgstr "ただし、サードパーティのライブラリは、非コンストラクタメソッドやフリーファンクションに依存関係を注入するためのサポートを何らかの形で提供する場合があります。"
+
+#: injector.inject:48 of
+msgid "Generic type :data:`Inject`"
+msgstr "ジェネリック型 :data:`Inject`"
+
+#: injector.inject:48 of
+msgid "A more explicit way to declare parameters as injectable."
+msgstr "パラメータを注入可能として宣言するためのより明示的な方法。"
+
+#: injector.inject:55 of
+msgid "(Re)added support for decorating classes with @inject."
+msgstr "@inject でクラスを装飾するためのサポートを (再)追加しました。"
+
+#: injector.is_decorated_with_inject:1 of
+msgid "See if given callable is declared to want some dependencies injected."
+msgstr "指定された呼び出し可能オブジェクトが依存関係の注入を希望するかどうかを確認します。"
+
+#: injector.is_decorated_with_inject:3 of
+msgid "Example use:"
+msgstr "使用例:"
+
+#: injector.multiprovider:1 of
+msgid "Like :func:`provider`, but for multibindings. Example usage::"
+msgstr ":func:`provider` のように、マルチバインディング用です。使用例::"
+
+#: injector.multiprovider:15 of
+msgid "See also: :meth:`Binder.multibind`."
+msgstr "関連項目: :meth:`Binder.multibind`。"
+
+#: injector.noninjectable:1 of
+msgid "Mark some parameters as not injectable."
+msgstr "一部のパラメータを注入不可能としてマークします。"
+
+#: injector.noninjectable:3 of
+msgid "This serves as documentation for people reading the code and will prevent Injector from ever attempting to provide the parameters."
+msgstr "これはコードを読む人のためのドキュメントとして機能し、Injector がパラメータを提供しようとするのを防ぎます。"
+
+#: injector.noninjectable:6 of
+msgid "For example:"
+msgstr "例えば:"
+
+#: injector.noninjectable:18 of
+msgid ":func:`noninjectable` decorations can be stacked on top of each other and the order in which a function is decorated with :func:`inject` and :func:`noninjectable` doesn't matter."
+msgstr ":func:`noninjectable` の装飾は重ねることができ、関数が :func:`inject` と :func:`noninjectable` で装飾される順序は関係ありません。"
+
+#: injector.noninjectable:26 of
+msgid "Generic type :data:`NoInject`"
+msgstr "ジェネリック型 :data:`NoInject`"
+
+#: injector.noninjectable:26 of
+msgid "A nicer way to declare parameters as noninjectable."
+msgstr "パラメータを注入不可能として宣言するためのより良い方法。"
+
+#: injector.provider:1 of
+msgid "Decorator for :class:`Module` methods, registering a provider of a type."
+msgstr ":class:`Module` メソッドのデコレータで、型のプロバイダーを登録します。"
+
+#: injector.provider:8 of
+msgid "@provider-decoration implies @inject so you can omit it and things will work just the same:"
+msgstr "@provider 装飾は @inject を意味するため、省略しても同じように機能します:"
+

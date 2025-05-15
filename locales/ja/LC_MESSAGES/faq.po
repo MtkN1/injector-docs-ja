@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Alec Thomas
+# This file is distributed under the same license as the Injector package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Injector 0.22.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 11:35+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../faq.rst:4
+msgid "Frequently Asked Questions"
+msgstr "よくある質問"
+
+#: ../../faq.rst:7
+msgid "If I use :func:`~injector.inject` or scope decorators on my classess will I be able to create instances of them without using Injector?"
+msgstr "クラスで :func:`~injector.inject` またはスコープデコレーターを使用する場合、Injector を使用せずにそれらのインスタンスを作成できますか?"
+
+#: ../../faq.rst:9
+msgid "Yes. Scope decorators don't change the way you can construct your class instances without Injector interaction."
+msgstr "はい。スコープデコレーターは、Injector との対話なしにクラスインスタンスを構築する方法を変更しません。"
+
+#: ../../faq.rst:13
+msgid "I'm calling this method (/function/class) but I'm getting \"TypeError: XXX() takes exactly X arguments (Y given)\""
+msgstr "このメソッド (/関数/クラス) を呼び出していますが、「TypeError: XXX() は正確に X 個の引数を取ります (Y 個指定されました)」というエラーが発生します。"
+
+#: ../../faq.rst:15
+msgid "Example code:"
+msgstr "コード例:"
+
+#: ../../faq.rst:30
+msgid "Result?"
+msgstr "結果は?"
+
+#: ../../faq.rst:36
+msgid "Reason? There's *no* global state that :class:`Injector` modifies when it's instantiated and configured. Its whole knowledge about bindings etc. is stored in itself. Moreover :func:`inject` will *not* make dependencies appear out of thin air when you for example attempt to create an instance of a class manually (without ``Injector``'s help) - there's no global state ``@inject`` decorated methods can access."
+msgstr "理由? :class:`Injector` がインスタンス化されて設定されるときに変更するグローバルな状態は*ありません*。バインディングなどに関するすべての知識はそれ自体に保存されます。さらに、たとえばクラスのインスタンスを手動で作成しようとしても (``Injector`` の助けなしに)、:func:`inject` は依存関係を何もないところから出現させることは*ありません* - ``@inject`` で装飾されたメソッドがアクセスできるグローバルな状態はありません。"
+
+#: ../../faq.rst:43
+msgid "In order for ``X`` to be able to use bindings defined in ``@inject`` decoration :class:`Injector` needs to be used (directly or indirectly) to create an instance of ``X``. This means most of the time you want to just inject ``X`` where you need it, you can also use :meth:`Injector.get` to obtain an instance of the class (see its documentation for usage notes)."
+msgstr "``X`` が ``@inject`` デコレーションで定義されたバインディングを使用できるようにするには、``X`` のインスタンスを作成するために (直接的または間接的に) :class:`Injector` を使用する必要があります。これは、ほとんどの場合、必要な場所に ``X`` を注入するだけでよいことを意味します。クラスのインスタンスを取得するために :meth:`Injector.get` を使用することもできます (使用上の注意については、そのドキュメントを参照してください)。"
+

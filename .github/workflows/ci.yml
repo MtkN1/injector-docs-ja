@@ -1,0 +1,48 @@
+name: CI
+on:
+  push:
+    branches: ["main"]
+  pull_request: null
+  workflow_dispatch: null
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: python-injector/injector
+          ref: 0e9905ee3cdcffceab7646450c9c698d94d1733a
+          path: build/injector
+      - run: cp -rT locales/ build/injector/docs/locales/
+      - uses: astral-sh/setup-uv@v6
+      - name: sphinx-build
+        run: |
+          uvx \
+            --from sphinx \
+            --with-requirements build/injector/requirements-docs.txt \
+            --with-editable build/injector/ \
+            sphinx-build \
+              -M html \
+              build/injector/docs/ \
+              build/injector/docs/_build/ \
+              -D language=ja
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/injector/docs/_build/html/
+  deploy:
+    permissions:
+      id-token: write
+      pages: write
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Alec Thomas
+# This file is distributed under the same license as the Injector package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Injector 0.22.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 11:35+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../terminology.rst:2
+msgid "Terminology"
+msgstr "用語"
+
+#: ../../terminology.rst:4
+msgid "At its heart, Injector is simply a dictionary for mapping types to things that create instances of those types. This could be as simple as::"
+msgstr "Injector の核心は、型をその型のインスタンスを作成するものにマッピングする単なる辞書です。これは次のように単純です::"
+
+#: ../../terminology.rst:8
+msgid "For those new to dependency-injection and/or Guice, though, some of the terminology used may not be obvious."
+msgstr "ただし、依存性注入や Guice に慣れていない人にとっては、使用されている用語の一部が明らかではない場合があります。"
+
+#: ../../terminology.rst:11
+msgid "Provider"
+msgstr "プロバイダー"
+
+#: ../../terminology.rst:13
+msgid "A means of providing an instance of a type. Built-in providers include:"
+msgstr "型のインスタンスを提供する手段。組み込みプロバイダーには次のものがあります。"
+
+#: ../../terminology.rst:15
+msgid ":class:`~injector.ClassProvider` - creates a new instance from a class"
+msgstr ":class:`~injector.ClassProvider` - クラスから新しいインスタンスを作成します"
+
+#: ../../terminology.rst:16
+msgid ":class:`~injector.InstanceProvider` - returns an existing instance directly"
+msgstr ":class:`~injector.InstanceProvider` - 既存のインスタンスを直接返します"
+
+#: ../../terminology.rst:17
+msgid ":class:`~injector.CallableProvider` - provides an instance by calling a function"
+msgstr ":class:`~injector.CallableProvider` - 関数を呼び出すことによってインスタンスを提供します"
+
+#: ../../terminology.rst:19
+msgid "In order to create custom provider you need to subclass :class:`~injector.Provider` and override its :meth:`~injector.Provider.get` method."
+msgstr "カスタムプロバイダーを作成するには、 :class:`~injector.Provider` をサブクラス化し、その :meth:`~injector.Provider.get` メソッドをオーバーライドする必要があります。"
+
+#: ../../terminology.rst:22
+msgid "Scope"
+msgstr "スコープ"
+
+#: ../../terminology.rst:24
+msgid "By default, providers are executed each time an instance is required. Scopes allow this behaviour to be customised. For example, `SingletonScope` (typically used through the class decorator `singleton`), can be used to always provide the same instance of a class."
+msgstr "デフォルトでは、インスタンスが必要になるたびにプロバイダーが実行されます。スコープを使用すると、この動作をカスタマイズできます。たとえば、`SingletonScope` (通常はクラスデコレーター `singleton` を介して使用されます) を使用して、常にクラスの同じインスタンスを提供できます。"
+
+#: ../../terminology.rst:26
+msgid "Other examples of where scopes might be a threading scope, where instances are provided per-thread, or a request scope, where instances are provided per-HTTP-request."
+msgstr "スコープの他の例としては、インスタンスがスレッドごとに提供されるスレッドスコープや、インスタンスが HTTP リクエストごとに提供されるリクエストスコープなどがあります。"
+
+#: ../../terminology.rst:28
+msgid "The default scope is :class:`NoScope`."
+msgstr "デフォルトのスコープは :class:`NoScope` です。"
+
+#: ../../terminology.rst:30
+msgid ":ref:`scopes`"
+msgstr ":ref:`スコープ <scopes>`"
+
+#: ../../terminology.rst:33
+msgid "Binding"
+msgstr "バインディング"
+
+#: ../../terminology.rst:35
+msgid "A binding is the mapping of a unique binding key to a corresponding provider. For example::"
+msgstr "バインディングは、一意のバインディングキーと対応するプロバイダーのマッピングです。例::"
+
+#: ../../terminology.rst:45
+msgid "Binder"
+msgstr "バインダー"
+
+#: ../../terminology.rst:47
+msgid "The `Binder` is simply a convenient wrapper around the dictionary that maps types to providers. It provides methods that make declaring bindings easier."
+msgstr "`Binder` は、型をプロバイダーにマップする辞書の便利なラッパーにすぎません。バインディングの宣言を容易にするメソッドを提供します。"
+
+#: ../../terminology.rst:53
+msgid "Module"
+msgstr "モジュール"
+
+#: ../../terminology.rst:55
+msgid "A `Module` configures bindings. It provides methods that simplify the process of binding a key to a provider. For example the above bindings would be created with::"
+msgstr "`Module` はバインディングを設定します。キーをプロバイダーにバインドするプロセスを簡略化するメソッドを提供します。たとえば、上記のバインディングは次のように作成されます::"
+
+#: ../../terminology.rst:63
+msgid "For more complex instance construction, methods decorated with `@provider` will be called to resolve binding keys::"
+msgstr "より複雑なインスタンス構築の場合、`@provider` で装飾されたメソッドが呼び出されてバインディングキーが解決されます::"
+
+#: ../../terminology.rst:75
+msgid "Injection"
+msgstr "インジェクション"
+
+#: ../../terminology.rst:77
+msgid "Injection is the process of providing an instance of a type, to a method that uses that instance. It is achieved with the `inject` decorator. Keyword arguments to inject define which arguments in its decorated method should be injected, and with what."
+msgstr "インジェクションは、型のインスタンスを、そのインスタンスを使用するメソッドに提供するプロセスです。これは `inject` デコレーターで実現されます。inject へのキーワード引数は、装飾されたメソッドのどの引数を何で注入するかを定義します。"
+
+#: ../../terminology.rst:79
+msgid "Here is an example of injection on a module provider method, and on the constructor of a normal class::"
+msgstr "これは、モジュールプロバイダーメソッドと通常のクラスのコンストラクターでのインジェクションの例です::"
+
+#: ../../terminology.rst:108
+msgid "Injector"
+msgstr "インジェクター"
+
+#: ../../terminology.rst:110
+msgid "The `Injector` brings everything together. It takes a list of `Module` s, and configures them with a binder, effectively creating a dependency graph::"
+msgstr "`Injector` はすべてをまとめます。`Module` のリストを受け取り、バインダーでそれらを設定し、効果的に依存関係グラフを作成します::"
+
+#: ../../terminology.rst:115
+msgid "You can also pass classes instead of instances to `Injector`, it will instantiate them for you::"
+msgstr "`Injector` にインスタンスの代わりにクラスを渡すこともできます。インスタンス化されます::"
+
+#: ../../terminology.rst:119
+msgid "The injector can then be used to acquire instances of a type, either directly::"
+msgstr "インジェクターは、直接的に、または::"
+
+#: ../../terminology.rst:126
+msgid "Or transitively::"
+msgstr "推移的に::"
+
+#: ../../terminology.rst:137
+msgid "Assisted injection"
+msgstr "アシストインジェクション"
+
+#: ../../terminology.rst:139
+msgid "Sometimes there are classes that have injectable and non-injectable parameters in their constructors. Let's have for example::"
+msgstr "コンストラクターに注入可能パラメータと注入不可能パラメータの両方を持つクラスがある場合があります。たとえば、次のようなものがあります::"
+
+#: ../../terminology.rst:153
+msgid "You may want to have database connection `db` injected into `UserUpdater` constructor, but in the same time provide `user` object by yourself, and assuming that `user` object is a value object and there's many users in your application it doesn't make much sense to inject objects of class `User`."
+msgstr "`UserUpdater` コンストラクターにデータベース接続 `db` を注入したいが、同時に `user` オブジェクトを自分で提供し、`user` オブジェクトが値オブジェクトであり、アプリケーションに多くのユーザーがいると仮定すると、クラス `User` のオブジェクトを注入することはあまり意味がありません。"
+
+#: ../../terminology.rst:155
+msgid "In this situation there's technique called Assisted injection::"
+msgstr "この状況では、アシストインジェクションと呼ばれる手法があります::"
+
+#: ../../terminology.rst:163
+msgid "This way we don't get `UserUpdater` directly but rather a builder object. Such builder has `build(**kwargs)` method which takes non-injectable parameters, combines them with injectable dependencies of `UserUpdater` and calls `UserUpdater` initializer using all of them."
+msgstr "このようにして、`UserUpdater` を直接取得するのではなく、ビルダーオブジェクトを取得します。このようなビルダーには、注入不可能なパラメーターを受け取り、それらを `UserUpdater` の注入可能な依存関係と組み合わせ、それらすべてを使用して `UserUpdater` 初期化子を呼び出す `build(**kwargs)` メソッドがあります。"
+
+#: ../../terminology.rst:165
+msgid "`AssistedBuilder[T]` and `ClassAssistedBuilder[T]` are injectable just as anything else, if you need instance of it you just ask for it like that::"
+msgstr "`AssistedBuilder[T]` と `ClassAssistedBuilder[T]` は他のものと同様に注入可能です。インスタンスが必要な場合は、次のように要求するだけです::"
+
+#: ../../terminology.rst:176
+msgid "`ClassAssistedBuilder` means it'll construct a concrete class and no bindings will be used."
+msgstr "`ClassAssistedBuilder` は、具象クラスを構築し、バインディングは使用されないことを意味します。"
+
+#: ../../terminology.rst:178
+msgid "If you want to follow bindings and construct class pointed to by a key you use `AssistedBuilder` and can do it like this::"
+msgstr "バインディングに従い、キーによってポイントされたクラスを構築する場合は、`AssistedBuilder` を使用して次のように実行できます::"
+
+#: ../../terminology.rst:193
+msgid "More information on this topic:"
+msgstr "このトピックに関する詳細情報:"
+
+#: ../../terminology.rst:195
+msgid "`\\"How to use Google Guice to create objects that require parameters?\\" on Stack Overflow <http://stackoverflow.com/questions/996300/how-to-use-google-guice-to-create-objects-that-require-parameters>`_"
+msgstr "`Stack Overflow の「Google Guice を使用してパラメータを必要とするオブジェクトを作成する方法は?」<http://stackoverflow.com/questions/996300/how-to-use-google-guice-to-create-objects-that-require-parameters>`_"
+
+#: ../../terminology.rst:196
+msgid "`Google Guice assisted injection <http://code.google.com/p/google-guice/wiki/AssistedInject>`_"
+msgstr "`Google Guice アシストインジェクション <http://code.google.com/p/google-guice/wiki/AssistedInject>`_"
+
+#: ../../terminology.rst:200
+msgid "Child injectors"
+msgstr "子インジェクター"
+
+#: ../../terminology.rst:202
+msgid "Concept similar to Guice's child injectors is supported by `Injector`. This way you can have one injector that inherits bindings from other injector (parent) but these bindings can be overriden in it and it doesn't affect parent injector bindings::"
+msgstr "Guice の子インジェクターに似た概念は `Injector` でサポートされています。これにより、他のインジェクター (親) からバインディングを継承するインジェクターを持つことができますが、これらのバインディングはそれでオーバーライドでき、親インジェクターのバインディングには影響しません::"
+
+#: ../../terminology.rst:218
+msgid "**Note**: Default scopes are bound only to root injector. Binding them manually to child injectors will result in unexpected behaviour. **Note 2**: Once a binding key is present in parent injector scope (like `singleton` scope), provider saved there takes predecence when binding is overridden in child injector in the same scope. This behaviour is subject to change::"
+msgstr "**注**: デフォルトのスコープはルートインジェクターにのみバインドされます。子インジェクターに手動でバインドすると、予期しない動作が発生します。**注 2**: バインディングキーが親インジェクタースコープ (シングルトンスコープなど) に存在すると、同じスコープの子インジェクターでバインディングがオーバーライドされた場合、そこに保存されているプロバイダーが優先されます。この動作は変更される可能性があります::"
+

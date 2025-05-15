@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Alec Thomas
+# This file is distributed under the same license as the Injector package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Injector 0.22.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 11:35+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../index.rst:7
+msgid "Welcome to Injector's documentation!"
+msgstr "Injector のドキュメントへようこそ！"
+
+#: ../../index.rst:-1
+msgid "Build status"
+msgstr "ビルドステータス"
+
+#: ../../index.rst:-1
+msgid "Covergage status"
+msgstr "カバレッジステータス"
+
+#: ../../index.rst:18
+msgid "GitHub (code repository, issues): https://github.com/alecthomas/injector"
+msgstr "GitHub (コードリポジトリ、issues): https://github.com/alecthomas/injector"
+
+#: ../../index.rst:20
+msgid "PyPI (installable, stable distributions): https://pypi.org/project/injector. You can install Injector using pip::"
+msgstr "PyPI (インストール可能、安定版ディストリビューション): https://pypi.org/project/injector。 pip を使用して Injector をインストールできます::"
+
+#: ../../index.rst:24
+msgid "Injector works with CPython 3.6+ and PyPy 3 implementing Python 3.6+."
+msgstr "Injector は CPython 3.6 以降と Python 3.6 以降を実装した PyPy 3 で動作します。"
+
+#: ../../index.rst:27
+msgid "Introduction"
+msgstr "はじめに"
+
+#: ../../index.rst:29
+msgid "While dependency injection is easy to do in Python due to its support for keyword arguments, the ease with which objects can be mocked and its dynamic natura, a framework for assisting in this process can remove a lot of boiler-plate from larger applications. That's where Injector can help. It automatically and transitively provides dependencies for you. As an added benefit, Injector encourages nicely compartmentalised code through the use of :ref:`modules <module>`."
+msgstr "Python はキーワード引数のサポート、オブジェクトのモックの容易さ、そしてその動的な性質により、依存性注入を簡単に行うことができますが、このプロセスを支援するフレームワークは、大規模なアプリケーションから多くの定型的なコードを削除することができます。そこで Injector が役立ちます。Injector は自動的かつ推移的に依存関係を提供します。追加の利点として、Injector は :ref:`モジュール <module>` の使用を通じて、適切に区分化されたコードを奨励します。"
+
+#: ../../index.rst:31
+msgid "If you're not sure what dependency injection is or you'd like to learn more about it see:"
+msgstr "依存性注入とは何かよくわからない場合や、それについてもっと学びたい場合は、以下を参照してください:"
+
+#: ../../index.rst:33
+msgid "`The Clean Code Talks - Don't Look For Things! (a talk by Miško Hevery) <https://www.youtube.com/watch?v=RlfLCWKxHJ0>`_"
+msgstr "`The Clean Code Talks - Don't Look For Things! (Miško Hevery 氏による講演) <https://www.youtube.com/watch?v=RlfLCWKxHJ0>`_"
+
+#: ../../index.rst:35
+msgid "`Inversion of Control Containers and the Dependency Injection pattern (an article by Martin Fowler) <https://martinfowler.com/articles/injection.html>`_"
+msgstr "`制御の反転コンテナと依存性注入パターン (Martin Fowler 氏による記事) <https://martinfowler.com/articles/injection.html>`_"
+
+#: ../../index.rst:38
+msgid "The core values of Injector are:"
+msgstr "Injector のコアバリューは次のとおりです:"
+
+#: ../../index.rst:40
+msgid "Simplicity - while being inspired by Guice, Injector does not slavishly replicate its API. Providing a Pythonic API trumps faithfulness. Additionally some features are ommitted because supporting them would be cumbersome and introduce a little bit too much \"magic\" (member injection, method injection)."
+msgstr "シンプルさ - Guice に触発されていますが、Injector はその API を忠実に複製するものではありません。Pythonic な API を提供することが忠実さよりも優先されます。さらに、いくつかの機能は、サポートが面倒で「マジック」(メンバーインジェクション、メソッドインジェクション) を少し導入しすぎるため省略されています。"
+
+#: ../../index.rst:45
+msgid "Connected to this, Injector tries to be as nonintrusive as possible. For example while you may declare a class' constructor to expect some injectable parameters, the class' constructor remains a standard constructor – you may instaniate the class just the same manually, if you want."
+msgstr "これに関連して、Injector は可能な限り非侵入的であるよう努めています。例えば、クラスのコンストラクタが注入可能なパラメータを期待するように宣言するかもしれませんが、クラスのコンストラクタは標準的なコンストラクタのままです – 必要であれば、手動で同じようにクラスをインスタンス化できます。"
+
+#: ../../index.rst:49
+msgid "No global state – you can have as many :class:`Injector` instances as you like, each with a different configuration and each with different objects in different scopes. Code like this won't work for this very reason::"
+msgstr "グローバルな状態なし – 好きなだけ多くの :class:`Injector` インスタンスを持つことができ、それぞれが異なる設定を持ち、それぞれが異なるスコープで異なるオブジェクトを持ちます。まさにこの理由により、このようなコードは機能しません::"
+
+#: ../../index.rst:62
+msgid "This is simply because there's no global :class:`Injector` to use. You need to be explicit and use :meth:`Injector.get <injector.Injector.get>`, :meth:`Injector.create_object <injector.Injector.create_object>` or inject `MyClass` into the place that needs it."
+msgstr "これは単に、使用するグローバルな :class:`Injector` がないためです。明示的に :meth:`Injector.get <injector.Injector.get>`、:meth:`Injector.create_object <injector.Injector.create_object>` を使用するか、`MyClass` をそれが必要な場所に注入する必要があります。"
+
+#: ../../index.rst:67
+msgid "Cooperation with static type checking infrastructure – the API provides as much static type safety as possible and only breaks it where there's no other option. For example the :meth:`Injector.get <injector.Injector.get>` method is typed such that `injector.get(SomeType)` is statically declared to return an instance of `SomeType`, therefore making it possible for tools such as `mypy <https://github.com/python/mypy>`_ to type-check correctly the code using it."
+msgstr "静的型チェック基盤との連携 – API は可能な限り静的な型安全性を提供し、他に選択肢がない場合にのみそれを破ります。例えば、:meth:`Injector.get <injector.Injector.get>` メソッドは `injector.get(SomeType)` が静的に `SomeType` のインスタンスを返すと宣言されるように型付けされているため、`mypy <https://github.com/python/mypy>`_ のようなツールがそれを使用するコードを正しく型チェックできるようになります。"
+
+#: ../../index.rst:74
+msgid "Quick start"
+msgstr "クイックスタート"
+
+#: ../../index.rst:76
+msgid "See `the project's README <https://github.com/alecthomas/injector/blob/master/README.md>`_ for an example of Injector use."
+msgstr "Injector の使用例については、`プロジェクトの README <https://github.com/alecthomas/injector/blob/master/README.md>`_ を参照してください。"
+
+#: ../../index.rst:80
+msgid "Contents"
+msgstr "目次"
+
