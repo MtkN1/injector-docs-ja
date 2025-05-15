@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Alec Thomas
+# This file is distributed under the same license as the Injector package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Injector 0.22.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 11:35+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../practices.rst:4
+msgid "Good and bad practices"
+msgstr "良い習慣と悪い習慣"
+
+#: ../../practices.rst:7
+msgid "Side effects"
+msgstr "副作用"
+
+#: ../../practices.rst:9
+msgid "You should avoid creating side effects in your modules for two reasons:"
+msgstr "モジュールで副作用を作成することは、次の 2 つの理由から避ける必要があります。"
+
+#: ../../practices.rst:11
+msgid "Side effects will make it more difficult to test a module if you want to do it"
+msgstr "副作用があると、モジュールをテストする場合にテストが難しくなります。"
+
+#: ../../practices.rst:12
+msgid "Modules expose a way to acquire some resource but they don't provide any way to release it. If, for example, your module connects to a remote server while creating a service you have no way of closing that connection unless the service exposes it."
+msgstr "モジュールはリソースを取得する方法を公開しますが、解放する方法は提供しません。たとえば、モジュールがサービスの作成中にリモートサーバーに接続する場合、サービスがそれを公開しない限り、その接続を閉じる方法はありません。"
+
+#: ../../practices.rst:19
+msgid "Injecting into constructors vs injecting into other methods"
+msgstr "コンストラクターへの注入と他のメソッドへの注入"
+
+#: ../../practices.rst:23
+msgid "Injector 0.11+ doesn't support injecting into non-constructor methods, this section is kept for historical reasons."
+msgstr "Injector 0.11 以降では、コンストラクター以外のメソッドへの注入はサポートされていません。このセクションは歴史的な理由から残されています。"
+
+#: ../../practices.rst:28
+msgid "Injector 0.11 deprecates using @inject with keyword arguments to declare bindings, this section remains unchanged for historical reasons."
+msgstr "Injector 0.11 では、バインディングを宣言するためのキーワード引数を持つ @inject の使用は非推奨になりました。このセクションは歴史的な理由から変更されていません。"
+
+#: ../../practices.rst:31
+msgid "In general you should prefer injecting into constructors to injecting into other methods because:"
+msgstr "一般に、次の理由から、他のメソッドへの注入よりもコンストラクターへの注入を優先する必要があります。"
+
+#: ../../practices.rst:34
+msgid "it can expose potential issues earlier (at object construction time rather than at the method call)"
+msgstr "潜在的な問題をより早い段階で (メソッド呼び出し時ではなくオブジェクト構築時に) 公開できます。"
+
+#: ../../practices.rst:36
+msgid "it exposes class' dependencies more openly. Constructor injection:"
+msgstr "クラスの依存関係をよりオープンに公開します。コンストラクターインジェクション:"
+
+#: ../../practices.rst:52
+msgid "Regular method injection:"
+msgstr "通常のメソッドインジェクション:"
+
+#: ../../practices.rst:68
+msgid "In first case you know all the dependencies by looking at the class' constructor, in the second you don't know about ``HTTP`` dependency until you see the method definition."
+msgstr "最初のケースでは、クラスのコンストラクターを見ることで すべての依存関係がわかりますが、2 番目のケースでは、メソッド定義を見るまで ``HTTP`` の依存関係についてはわかりません。"
+
+#: ../../practices.rst:72
+msgid "Slightly different approach is suggested when it comes to Injector modules - in this case injecting into their constructors (or ``configure`` methods) would make the injection process dependent on the order of passing modules to Injector and therefore quite fragile. See this code sample:"
+msgstr "Injector モジュールに関しては、少し異なるアプローチが提案されています。この場合、コンストラクター (または ``configure`` メソッド) に注入すると、注入プロセスが Injector にモジュールを渡す順序に依存するため、非常に脆弱になります。このコードサンプルを参照してください:"
+
+#: ../../practices.rst:109
+msgid "Doing too much in modules and/or providers"
+msgstr "モジュールやプロバイダーで処理しすぎている"
+
+#: ../../practices.rst:111
+msgid "An implementation detail of Injector: Injector and accompanying classes are protected by a lock to make them thread safe. This has a downside though: in general only one thread can use dependency injection at any given moment."
+msgstr "Injector の実装の詳細: Injector と付随するクラスは、スレッドセーフにするためにロックによって保護されています。ただし、これには欠点があります。一般に、特定の瞬間に依存性注入を使用できるスレッドは 1 つだけです。"
+
+#: ../../practices.rst:115
+msgid "In best case scenario you \"only\" slow other threads' dependency injection down. In worst case scenario (performing blocking calls without timeouts) you can **deadlock** whole application."
+msgstr "最良のシナリオでは、他のスレッドの依存性注入を「のみ」遅くします。最悪のシナリオ (タイムアウトなしでブロッキングコールを実行する) では、アプリケーション全体が **デッドロック** する可能性があります。"
+
+#: ../../practices.rst:119
+msgid "**It is advised to avoid performing any IO, particularly without a timeout set, inside modules code.**"
+msgstr "**特にタイムアウトを設定せずに、モジュールコード内で IO を実行することは避けることをお勧めします。**"
+
+#: ../../practices.rst:122
+msgid "As an illustration:"
+msgstr "図解として:"
+
+#: ../../practices.rst:169
+msgid "Here's the output of the application::"
+msgstr "アプリケーションの出力は次のとおりです::"
+
+#: ../../practices.rst:179
+msgid "Injecting Injector and abusing Injector.get"
+msgstr "Injector の注入と Injector.get の乱用"
+
+#: ../../practices.rst:181
+msgid "Sometimes code like this is written:"
+msgstr "このようなコードが書かれることがあります:"
+
+#: ../../practices.rst:198
+msgid "It is advised to use the following pattern instead:"
+msgstr "代わりに次のパターンを使用することをお勧めします:"
+
+#: ../../practices.rst:215
+msgid "The second form has the benefits of:"
+msgstr "2 番目の形式には、次の利点があります。"
+
+#: ../../practices.rst:217
+msgid "expressing clearly what the dependencies of ``C`` are"
+msgstr "``C`` の依存関係を明確に表現する"
+
+#: ../../practices.rst:218
+msgid "making testing of the ``C`` class easier - you can provide the dependencies (whether they are mocks or not) directly, instead of having to mock :class:`Injector` and make the mock handle :meth:`Injector.get` calls"
+msgstr "``C`` クラスのテストを容易にする - :class:`Injector` をモックし、モックに :meth:`Injector.get` 呼び出しを処理させる代わりに、依存関係 (モックであるかどうかに関係なく) を直接提供できます。"
+
+#: ../../practices.rst:221
+msgid "following the common practice and being easier to understand"
+msgstr "一般的な慣行に従い、理解しやすくなります。"
+
+#: ../../practices.rst:225
+msgid "Injecting dependencies only to pass them somewhere else"
+msgstr "依存関係を他の場所に渡すためだけに注入する"
+
+#: ../../practices.rst:227
+msgid "A pattern similar to the one below can emerge:"
+msgstr "以下のようなパターンが出現する可能性があります。"
+
+#: ../../practices.rst:243
+msgid "Class ``C`` in this example has the responsibility of gathering dependencies of class ``B`` and constructing an object of type ``B``, there may be a valid reason for it but in general it defeats the purpose of using ``Injector`` and should be avoided."
+msgstr "この例のクラス ``C`` は、クラス ``B`` の依存関係を収集し、型 ``B`` のオブジェクトを構築する責任を負います。これには正当な理由があるかもしれませんが、一般的には ``Injector`` を使用する目的を果たしておらず、避けるべきです。"
+
+#: ../../practices.rst:248
+msgid "The appropriate pattern is:"
+msgstr "適切なパターンは次のとおりです。"
+

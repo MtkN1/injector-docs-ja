@@ -1,0 +1,611 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Alec Thomas
+# This file is distributed under the same license as the Injector package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Injector 0.22.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 11:35+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../../CHANGES:2
+msgid "Injector Change Log"
+msgstr "Injector 変更履歴"
+
+#: ../../../CHANGES:5
+msgid "0.22.0"
+msgstr "0.22.0"
+
+#: ../../../CHANGES:7
+msgid "Date: 2024-07-08"
+msgstr "日付: 2024-07-08"
+
+#: ../../../CHANGES:9
+msgid "Added:"
+msgstr "追加:"
+
+#: ../../../CHANGES:11
+msgid "Added support for injecting `PEP 593 <https://peps.python.org/pep-0593/>`_ `Annotated <https://docs.python.org/3/library/typing.html#typing.Annotated>`_"
+msgstr "`PEP 593 <https://peps.python.org/pep-0593/>`_ `Annotated <https://docs.python.org/3/library/typing.html#typing.Annotated>`_ の注入サポートを追加しました"
+
+#: ../../../CHANGES:14
+msgid "Removed:"
+msgstr "削除:"
+
+#: ../../../CHANGES:16
+msgid "Dropped Python 3.7 support"
+msgstr "Python 3.7 のサポートを終了しました"
+
+#: ../../../CHANGES:19
+msgid "0.21.0"
+msgstr "0.21.0"
+
+#: ../../../CHANGES:21
+msgid "Improved the documentation, thanks to jonathanmach and Jakub Wilk"
+msgstr "jonathanmach と Jakub Wilk のおかげでドキュメントを改善しました"
+
+#: ../../../CHANGES:22
+msgid "Fixed a thread-safety regression"
+msgstr "スレッドセーフティのリグレッションを修正しました"
+
+#: ../../../CHANGES:23
+msgid "Improved the type annotations, thanks to David Pärsson"
+msgstr "David Pärsson のおかげで型アノテーションを改善しました"
+
+#: ../../../CHANGES:24
+msgid "Fixed singleton scope behavior with parent/child injectors, thanks to David Pärsson"
+msgstr "David Pärsson のおかげで親子インジェクタでのシングルトンスコープの動作を修正しました"
+
+#: ../../../CHANGES:25
+msgid "Stopped using a deprecated test function, thanks to ljnsn"
+msgstr "ljnsn のおかげで非推奨のテスト関数の使用を停止しました"
+
+#: ../../../CHANGES:28
+msgid "0.20.1"
+msgstr "0.20.1"
+
+#: ../../../CHANGES:30
+msgid "Added support for PEP 604 union types (Python 3.10+), thanks to David Pärsson"
+msgstr "David Pärsson のおかげで PEP 604 共用体型 (Python 3.10+) のサポートを追加しました"
+
+#: ../../../CHANGES:31
+msgid "Fixed building with pypandoc 1.8+, thanks to Søren Fuglede Jørgensen"
+msgstr "Søren Fuglede Jørgensen のおかげで pypandoc 1.8+ でのビルドを修正しました"
+
+#: ../../../CHANGES:34
+msgid "0.20.0"
+msgstr "0.20.0"
+
+#: ../../../CHANGES:36
+msgid "Fixed handling of Union combined with Annotated, thanks to Tobias Nilsson"
+msgstr "Tobias Nilsson のおかげで Annotated と組み合わせた Union の処理を修正しました"
+
+#: ../../../CHANGES:37
+msgid "Fixed AssitedBuilder/child Injector interaction, thanks to Erik Cederberg"
+msgstr "Erik Cederberg のおかげで AssitedBuilder/子インジェクタの相互作用を修正しました"
+
+#: ../../../CHANGES:38
+msgid "Made get_bindings() and injections work even if a injectee's return type annotation is a forward reference that can't be resolved"
+msgstr "注入対象の戻り値の型アノテーションが解決できない前方参照であっても `get_bindings()` と注入が機能するようにしました"
+
+#: ../../../CHANGES:41 ../../../CHANGES:54 ../../../CHANGES:92
+#: ../../../CHANGES:132 ../../../CHANGES:158 ../../../CHANGES:190
+#: ../../../CHANGES:282
+msgid "Backwards incompatible:"
+msgstr "後方互換性のない変更:"
+
+#: ../../../CHANGES:43
+msgid "Dropped Python 3.6 support"
+msgstr "Python 3.6 のサポートを終了しました"
+
+#: ../../../CHANGES:46
+msgid "0.19.0"
+msgstr "0.19.0"
+
+#: ../../../CHANGES:48
+msgid "Added the license to the source distribution, thanks to Joshua Adelman"
+msgstr "Joshua Adelman のおかげでソース配布にライセンスを追加しました"
+
+#: ../../../CHANGES:49
+msgid "Added Python 3.9 and 3.10 support, this includes fixing Python 3.10 compatibility, thanks to Torge Matthies"
+msgstr "Torge Matthies のおかげで Python 3.9 と 3.10 のサポートを追加しました。これには Python 3.10 との互換性の修正が含まれます"
+
+#: ../../../CHANGES:50
+msgid "Improved the documentation, thanks to Takahiro Kojima"
+msgstr "Takahiro Kojima のおかげでドキュメントを改善しました"
+
+#: ../../../CHANGES:51
+msgid "Improved the source distribution so that it can be used to build and install wheels, thanks to Janusz Skonieczny"
+msgstr "Janusz Skonieczny のおかげで wheel のビルドとインストールに使用できるようにソース配布を改善しました"
+
+#: ../../../CHANGES:52
+msgid "Added requirements files for easier development, thanks to Greg Eremeev"
+msgstr "Greg Eremeev のおかげで開発を容易にするための requirements ファイルを追加しました"
+
+#: ../../../CHANGES:56
+msgid "Removed Python 3.5 support"
+msgstr "Python 3.5 のサポートを削除しました"
+
+#: ../../../CHANGES:59
+msgid "0.18.4"
+msgstr "0.18.4"
+
+#: ../../../CHANGES:61
+msgid "Fixed a bug where only one of multiple NoInject annotations was interpreted"
+msgstr "複数の NoInject アノテーションのうち1つしか解釈されないバグを修正しました"
+
+#: ../../../CHANGES:64
+msgid "0.18.3"
+msgstr "0.18.3"
+
+#: ../../../CHANGES:66
+msgid "Fixed Python 3.5.3 compatibility"
+msgstr "Python 3.5.3 との互換性を修正しました"
+
+#: ../../../CHANGES:69
+msgid "0.18.2"
+msgstr "0.18.2"
+
+#: ../../../CHANGES:71
+msgid "Added remaining type hints to the codebase so that the client code can have better static typing safety"
+msgstr "クライアントコードの静的型付けの安全性を向上させるために、残りの型ヒントをコードベースに追加しました"
+
+#: ../../../CHANGES:72
+msgid "Fixed UnsatisfiedRequirement string representation (this time for real)"
+msgstr "UnsatisfiedRequirement の文字列表現を修正しました (今度こそ本当に)"
+
+#: ../../../CHANGES:73
+msgid "Added forward return type reference support to provider methods"
+msgstr "プロバイダーメソッドに前方戻り型参照のサポートを追加しました"
+
+#: ../../../CHANGES:76
+msgid "0.18.1"
+msgstr "0.18.1"
+
+#: ../../../CHANGES:78
+msgid "Fixed UnsatisfiedRequirement instantiation (trying to get its string representation would fail)"
+msgstr "UnsatisfiedRequirement のインスタンス化を修正しました (その文字列表現を取得しようとすると失敗していました)"
+
+#: ../../../CHANGES:79
+msgid "Fixed injecting a subclass of a generic type on Python versions older than 3.7.0"
+msgstr "3.7.0 より古い Python バージョンでジェネリック型のサブクラスを注入する際の問題を修正しました"
+
+#: ../../../CHANGES:80
+msgid "Fixed regression that caused BoundKey injection failure"
+msgstr "BoundKey 注入の失敗を引き起こしたリグレッションを修正しました"
+
+#: ../../../CHANGES:83
+msgid "0.18.0"
+msgstr "0.18.0"
+
+#: ../../../CHANGES:85
+msgid "Added new public :func:`get_bindings <injector.get_bindings>` function to see what parameters will be injected into a function"
+msgstr "関数にどのパラメータが注入されるかを確認するための新しい公開関数 :func:`get_bindings <injector.get_bindings>` を追加しました"
+
+#: ../../../CHANGES:87
+msgid "Added new generic types using a draft implementation of `PEP 593 <https://www.python.org/dev/peps/pep-0593/>`_: :data:`Inject <injector.Inject>` and :data:`NoInject <injector.NoInject>`. Those serve as additional ways to declare (non)injectable parameters while :func:`inject <injector.inject>` won't go away any time soon :func:`noninjectable <injector.noninjectable>` may be removed once `NoInject` is cofirmed to work."
+msgstr "`PEP 593 <https://www.python.org/dev/peps/pep-0593/>`_ のドラフト実装を使用した新しいジェネリック型 :data:`Inject <injector.Inject>` と :data:`NoInject <injector.NoInject>` を追加しました。これらは (非) 注入可能パラメータを宣言する追加の方法として機能しますが、:func:`inject <injector.inject>` はすぐにはなくなりません。:func:`noninjectable <injector.noninjectable>` は `NoInject` の動作が確認され次第削除される可能性があります。"
+
+#: ../../../CHANGES:94
+msgid "Removed previously deprecated `Key`, `BindingKey`, `SequenceKey` and `MappingKey` pseudo-types"
+msgstr "以前に非推奨とされた `Key`、`BindingKey`、`SequenceKey`、`MappingKey` 疑似型を削除しました"
+
+#: ../../../CHANGES:97
+msgid "0.17.0"
+msgstr "0.17.0"
+
+#: ../../../CHANGES:99
+msgid "Added support for using `typing.Dict` and `typing.List` in multibindings. See :meth:`multibind <injector.Binder.multibind>`."
+msgstr "マルチバインディングで `typing.Dict` と `typing.List` を使用するためのサポートを追加しました。詳細は :meth:`multibind <injector.Binder.multibind>` を参照してください。"
+
+#: ../../../CHANGES:100
+msgid "Added multibinding-specific :func:`provider <injector.provider>` variant: :func:`multiprovider <injector.multiprovider>`"
+msgstr "マルチバインディング固有の :func:`provider <injector.provider>` の亜種である :func:`multiprovider <injector.multiprovider>` を追加しました"
+
+#: ../../../CHANGES:101
+msgid "Deprecated using :func:`provider <injector.provider>` for multibindings"
+msgstr "マルチバインディングでの :func:`provider <injector.provider>` の使用を非推奨にしました"
+
+#: ../../../CHANGES:102
+msgid "Fixed failure to provide a default value to a `NewType`-aliased type with auto_bind enabled"
+msgstr "auto_bind が有効な場合に `NewType` でエイリアスされた型にデフォルト値を提供できない問題を修正しました"
+
+#: ../../../CHANGES:103
+msgid "Deprecated :func:`Key <injector.Key>`, :func:`SequenceKey <injector.SequenceKey>` and :func:`MappingKey <injector.MappingKey>` – use real types or type aliases instead"
+msgstr ":func:`Key <injector.Key>`、:func:`SequenceKey <injector.SequenceKey>`、:func:`MappingKey <injector.MappingKey>` を非推奨にしました – 代わりに実際の型または型エイリアスを使用してください"
+
+#: ../../../CHANGES:105
+msgid "Deprecated using single-item lists and dictionaries for multibindings - use real types or type aliases instead"
+msgstr "マルチバインディングで単一アイテムのリストと辞書を使用することを非推奨にしました - 代わりに実際の型または型エイリアスを使用してください"
+
+#: ../../../CHANGES:107 ../../../CHANGES:208
+msgid "Technically backwards incompatible:"
+msgstr "技術的に後方互換性のない変更:"
+
+#: ../../../CHANGES:109
+msgid "typing.List and typing.Dict specializations are now explicitly disallowed as :meth:`bind <injector.Binder.bind>` interfaces and types returned by :func:`provider <injector.provider>`-decorated methods"
+msgstr ":meth:`bind <injector.Binder.bind>` インターフェースおよび :func:`provider <injector.provider>` で装飾されたメソッドによって返される型として、`typing.List` と `typing.Dict` の特殊化が明示的に禁止されるようになりました"
+
+#: ../../../CHANGES:113
+msgid "0.16.2"
+msgstr "0.16.2"
+
+#: ../../../CHANGES:115
+msgid "(Re)added support for decorating classes themselves with :func:`@inject <injector.inject>`. This is the same as decorating their constructors. Among other things this gives us `dataclasses <https://docs.python.org/3/library/dataclasses.html>`_ integration."
+msgstr "クラス自体を :func:`@inject <injector.inject>` で装飾するサポートを (再) 追加しました。これはコンストラクタを装飾するのと同じです。とりわけ、これにより `dataclasses <https://docs.python.org/3/library/dataclasses.html>`_ との統合が可能になります。"
+
+#: ../../../CHANGES:120
+msgid "0.16.1"
+msgstr "0.16.1"
+
+#: ../../../CHANGES:122
+msgid "Reuploaded to fix incorrectly formatted project description"
+msgstr "誤ってフォーマットされたプロジェクトの説明を修正するために再アップロードしました"
+
+#: ../../../CHANGES:125
+msgid "0.16.0"
+msgstr "0.16.0"
+
+#: ../../../CHANGES:127
+msgid "Added support for overriding injectable parameters with positional arguments (previously only possible with keyword arguments)"
+msgstr "位置引数で注入可能なパラメータをオーバーライドするサポートを追加しました (以前はキーワード引数でのみ可能でした)"
+
+#: ../../../CHANGES:129
+msgid "Fixed crashes caused by typed self in method signatures"
+msgstr "メソッドシグネチャ内の型付けされた self によって引き起こされるクラッシュを修正しました"
+
+#: ../../../CHANGES:130
+msgid "Improved typing coverage"
+msgstr "型付けのカバレッジを改善しました"
+
+#: ../../../CHANGES:134
+msgid "Dropped Python 3.4 support"
+msgstr "Python 3.4 のサポートを終了しました"
+
+#: ../../../CHANGES:135
+msgid "Removed previously deprecated constructs: with_injector, Injector.install_into, Binder.bind_scope"
+msgstr "以前に非推奨とされた構成要素 (with_injector、Injector.install_into、Binder.bind_scope) を削除しました"
+
+#: ../../../CHANGES:136
+msgid "Dependencies are no longer injected into Module.configure and raw module functions (previously deprecated)"
+msgstr "依存関係は Module.configure および生のモジュール関数には注入されなくなりました (以前は非推奨)"
+
+#: ../../../CHANGES:138
+msgid "- Removed unofficial support for injecting into parent class constructors"
+msgstr "- 親クラスのコンストラクタへの注入に関する非公式なサポートを削除しました"
+
+#: ../../../CHANGES:141
+msgid "0.15.0"
+msgstr "0.15.0"
+
+#: ../../../CHANGES:143
+msgid "Added type information for Injector.create_object() (patch #101 thanks to David Pärsson)"
+msgstr "Injector.create_object() の型情報を追加しました (David Pärsson によるパッチ #101)"
+
+#: ../../../CHANGES:144
+msgid "Made the code easier to understand (patch #105 thanks to Christian Clauss)"
+msgstr "コードを理解しやすくしました (Christian Clauss によるパッチ #105)"
+
+#: ../../../CHANGES:145
+msgid "Opted the package into distributing type information and checking it (PEP 561)"
+msgstr "パッケージが型情報を配布し、それをチェックするようにしました (PEP 561)"
+
+#: ../../../CHANGES:148
+msgid "0.14.1"
+msgstr "0.14.1"
+
+#: ../../../CHANGES:150
+msgid "Fixed regression that required all noninjectable parameters to be typed"
+msgstr "すべての非注入可能パラメータが型付けされる必要があるというリグレッションを修正しました"
+
+#: ../../../CHANGES:153
+msgid "0.14.0"
+msgstr "0.14.0"
+
+#: ../../../CHANGES:155
+msgid "Added NewType support"
+msgstr "NewType のサポートを追加しました"
+
+#: ../../../CHANGES:156
+msgid "Added type hints"
+msgstr "型ヒントを追加しました"
+
+#: ../../../CHANGES:160
+msgid "Passing invalid parameter names to @noninjectable() will now result in an error"
+msgstr "@noninjectable() に無効なパラメータ名を渡すとエラーが発生するようになりました"
+
+#: ../../../CHANGES:161
+msgid "Dropped Python 3.3 support"
+msgstr "Python 3.3 のサポートを終了しました"
+
+#: ../../../CHANGES:164
+msgid "0.13.4"
+msgstr "0.13.4"
+
+#: ../../../CHANGES:166
+msgid "Deprecated with_injector. There's no one migration path recommended, it depends on a particular case."
+msgstr "with_injector を非推奨にしました。推奨される単一の移行パスはなく、特定のケースに依存します。"
+
+#: ../../../CHANGES:168
+msgid "Deprecated install_into."
+msgstr "install_into を非推奨にしました。"
+
+#: ../../../CHANGES:171
+msgid "0.13.3"
+msgstr "0.13.3"
+
+#: ../../../CHANGES:173
+msgid "Fixed a bug with classes deriving from PyQt classes not being able to be instantiated manually (bug #75, patch #76 thanks to David Pärsson)"
+msgstr "PyQt クラスから派生したクラスを手動でインスタンス化できないバグを修正しました (バグ #75、David Pärsson によるパッチ #76)"
+
+#: ../../../CHANGES:177
+msgid "0.13.2"
+msgstr "0.13.2"
+
+#: ../../../CHANGES:179
+msgid "Fixed a bug with values shared between Injectors in a hierarchy (bugs #52 and #72)"
+msgstr "階層内のインジェクタ間で共有される値に関するバグを修正しました (バグ #52 および #72)"
+
+#: ../../../CHANGES:180
+msgid "Binding scopes explicitly (``Binder.bind_scope``) is no longer necessary and ``bind_scope`` is a no-op now."
+msgstr "スコープを明示的にバインドする (``Binder.bind_scope``) 必要がなくなり、``bind_scope`` は現在何もしません。"
+
+#: ../../../CHANGES:183
+msgid "0.13.1"
+msgstr "0.13.1"
+
+#: ../../../CHANGES:185
+msgid "Improved some error messages"
+msgstr "いくつかのエラーメッセージを改善しました"
+
+#: ../../../CHANGES:188
+msgid "0.13.0"
+msgstr "0.13.0"
+
+#: ../../../CHANGES:192
+msgid "Dropped Python 3.2 support"
+msgstr "Python 3.2 のサポートを終了しました"
+
+#: ../../../CHANGES:193
+msgid "Dropped Injector use_annotations constructor parameter. Whenever @inject is used parameter annotations will be used automatically."
+msgstr "Injector の use_annotations コンストラクタパラメータを削除しました。@inject が使用されると、パラメータアノテーションが自動的に使用されます。"
+
+#: ../../../CHANGES:195
+msgid "Dropped Python 2 support (this includes PyPy)"
+msgstr "Python 2 のサポートを終了しました (PyPy を含む)"
+
+#: ../../../CHANGES:196
+msgid "Removed @provides decorator, use @provider instead"
+msgstr "@provides デコレータを削除し、代わりに @provider を使用するようにしました"
+
+#: ../../../CHANGES:197
+msgid "Removed support for passing keyword arguments to @inject"
+msgstr "@inject にキーワード引数を渡すサポートを削除しました"
+
+#: ../../../CHANGES:200
+msgid "0.12.0"
+msgstr "0.12.0"
+
+#: ../../../CHANGES:202
+msgid "Fixed binding inference in presence of * and ** arguments (previously Injector would generate extra arguments, now it just ignores them)"
+msgstr "* および ** 引数が存在する場合のバインディング推論を修正しました (以前は Injector が余分な引数を生成していましたが、現在は無視します)"
+
+#: ../../../CHANGES:204
+msgid "Improved error reporting"
+msgstr "エラー報告を改善しました"
+
+#: ../../../CHANGES:205
+msgid "Fixed compatibility with newer typing versions (that includes the one bundled with Python 3.6)"
+msgstr "新しい typing バージョン (Python 3.6 にバンドルされているものを含む) との互換性を修正しました"
+
+#: ../../../CHANGES:210
+msgid "Forward references as PEP 484 understands them are being resolved now when Python 3-style annotations are used. See https://www.python.org/dev/peps/pep-0484/#forward-references for details."
+msgstr "PEP 484 が理解する前方参照は、Python 3 スタイルのアノテーションが使用されると解決されるようになりました。詳細については、https://www.python.org/dev/peps/pep-0484/#forward-references を参照してください。"
+
+#: ../../../CHANGES:214
+msgid "Optional parameters are treated as compulsory for the purpose of injection."
+msgstr "オプションパラメータは、注入の目的では必須として扱われます。"
+
+#: ../../../CHANGES:217
+msgid "0.11.1"
+msgstr "0.11.1"
+
+#: ../../../CHANGES:219
+msgid "0.11.0 packages uploaded to PyPI are broken (can't be installed), this is a fix-only release."
+msgstr "PyPI にアップロードされた 0.11.0 パッケージは壊れており (インストールできません)、これは修正のみのリリースです。"
+
+#: ../../../CHANGES:223
+msgid "0.11.0"
+msgstr "0.11.0"
+
+#: ../../../CHANGES:225
+msgid "The following way to declare dependencies is introduced and recommended now:"
+msgstr "依存関係を宣言する以下の方法が導入され、現在推奨されています:"
+
+#: ../../../CHANGES:235
+msgid "The following ways are still supported but are deprecated and will be removed in the future:"
+msgstr "以下の方法は引き続きサポートされていますが、非推奨であり、将来削除される予定です:"
+
+#: ../../../CHANGES:254
+msgid "The following way to declare Module provider methods is introduced and recommended now:"
+msgstr "モジュールプロバイダメソッドを宣言する以下の方法が導入され、現在推奨されています:"
+
+#: ../../../CHANGES:264
+msgid "@provider implies @inject."
+msgstr "@provider は @inject を意味します。"
+
+#: ../../../CHANGES:266
+msgid "Previously it would look like this:"
+msgstr "以前は次のようになっていました:"
+
+#: ../../../CHANGES:276
+msgid "The :func:`~injector.provides` decorator will be removed in the future."
+msgstr ":func:`~injector.provides` デコレータは将来削除される予定です。"
+
+#: ../../../CHANGES:278
+msgid "Added a :func:`~injector.noninjectable` decorator to mark parameters as not injectable (this serves as documentation and a way to avoid some runtime errors)"
+msgstr "パラメータを注入不可としてマークするための :func:`~injector.noninjectable` デコレータを追加しました (これはドキュメントとして、また一部のランタイムエラーを回避する方法として機能します)"
+
+#: ../../../CHANGES:284
+msgid "Removed support for decorating classes with :func:`@inject <injector.inject>`. Previously:"
+msgstr "クラスを :func:`@inject <injector.inject>` で装飾するサポートを削除しました。以前は:"
+
+#: ../../../CHANGES:292 ../../../CHANGES:329
+msgid "Now:"
+msgstr "現在:"
+
+#: ../../../CHANGES:301
+msgid "Removed support for injecting partially applied functions, previously:"
+msgstr "部分適用された関数への注入のサポートを削除しました。以前は:"
+
+#: ../../../CHANGES:315
+msgid "Now you need to move the function with injectable dependencies to a class."
+msgstr "現在、注入可能な依存関係を持つ関数をクラスに移動する必要があります。"
+
+#: ../../../CHANGES:317
+msgid "Removed support for getting :class:`AssistedBuilder(callable=...) <injector.AssistedBuilder>`"
+msgstr ":class:`AssistedBuilder(callable=...) <injector.AssistedBuilder>` を取得するサポートを削除しました"
+
+#: ../../../CHANGES:318
+msgid "Dropped Python 2.6 support"
+msgstr "Python 2.6 のサポートを終了しました"
+
+#: ../../../CHANGES:319
+msgid "Changed the way :class:`~injector.AssistedBuilder` and :class:`~injector.ProviderOf` are used. Previously:"
+msgstr ":class:`~injector.AssistedBuilder` と :class:`~injector.ProviderOf` の使用方法を変更しました。以前は:"
+
+#: ../../../CHANGES:337
+msgid "Removed support for injecting into non-constructor methods"
+msgstr "非コンストラクタメソッドへの注入のサポートを削除しました"
+
+#: ../../../CHANGES:340
+msgid "0.10.1"
+msgstr "0.10.1"
+
+#: ../../../CHANGES:342
+msgid "Fixed a false positive bug in dependency cycle detection (AssistedBuilder can be used to break dependency cycles now)"
+msgstr "依存関係サイクルの検出における誤検知バグを修正しました (AssistedBuilder を使用して依存関係サイクルを解消できるようになりました)"
+
+#: ../../../CHANGES:346
+msgid "0.10.0"
+msgstr "0.10.0"
+
+#: ../../../CHANGES:348
+msgid ":meth:`injector.Provider.get()` now requires an :class:`injector.Injector` instance as its parameter"
+msgstr ":meth:`injector.Provider.get()` は、パラメータとして :class:`injector.Injector` インスタンスを必要とするようになりました"
+
+#: ../../../CHANGES:350
+msgid "deprecated injecting arguments into modules (be it functions/callables, :class:`~injector.Module` constructors or :meth:`injector.Module.configure` methods)"
+msgstr "モジュールへの引数の注入を非推奨にしました (関数/呼び出し可能オブジェクト、:class:`~injector.Module` コンストラクタ、または :meth:`injector.Module.configure` メソッドのいずれであっても)"
+
+#: ../../../CHANGES:352
+msgid "removed `extends` decorator"
+msgstr "`extends` デコレータを削除しました"
+
+#: ../../../CHANGES:353
+msgid "few classes got useful __repr__ implementations"
+msgstr "いくつかのクラスに便利な __repr__ 実装が追加されました"
+
+#: ../../../CHANGES:354
+msgid "fixed injecting ProviderOf and AssistedBuilders when :class:`injector.Injector` auto_bind is set to False (previously would result in `UnsatisfiedRequirement` error)"
+msgstr ":class:`injector.Injector` の auto_bind が False に設定されている場合に ProviderOf と AssistedBuilders を注入する際の問題を修正しました (以前は `UnsatisfiedRequirement` エラーが発生していました)"
+
+#: ../../../CHANGES:357
+msgid "fixed crash occurring when Python 3-function annotation use is enabled and __init__ method has a return value annotation (\"injector.UnknownProvider: couldn't determine provider for None to None\"), should also apply to free functions as well"
+msgstr "Python 3 の関数アノテーションの使用が有効で、__init__ メソッドに戻り値のアノテーションがある場合に発生するクラッシュを修正しました (\"injector.UnknownProvider: couldn't determine provider for None to None\")。これはフリー関数にも適用されるはずです"
+
+#: ../../../CHANGES:363
+msgid "0.9.1"
+msgstr "0.9.1"
+
+#: ../../../CHANGES:364
+msgid "Bug fix release."
+msgstr "バグ修正リリース。"
+
+#: ../../../CHANGES:367
+msgid "0.9.0"
+msgstr "0.9.0"
+
+#: ../../../CHANGES:369
+msgid "Child :class:`~injector.Injector` can rebind dependancies bound in parent Injector (that changes :class:`~injector.Provider` semantics), thanks to Ilya Orlov"
+msgstr "Ilya Orlov のおかげで、子 :class:`~injector.Injector` は親 Injector でバインドされた依存関係を再バインドできるようになりました (これにより :class:`~injector.Provider` のセマンティクスが変更されます)"
+
+#: ../../../CHANGES:370
+msgid ":class:`~injector.CallableProvider` callables can be injected into, thanks to Ilya Strukov"
+msgstr "Ilya Strukov のおかげで、:class:`~injector.CallableProvider` の呼び出し可能オブジェクトに注入できるようになりました"
+
+#: ../../../CHANGES:371
+msgid "One can request :class:`~injector.ProviderOf` (Interface) and get a :class:`~injector.BoundProvider` which can be used to get an implementation of Interface when needed"
+msgstr ":class:`~injector.ProviderOf` (インターフェース) を要求し、必要に応じてインターフェースの実装を取得するために使用できる :class:`~injector.BoundProvider` を取得できます"
+
+#: ../../../CHANGES:374
+msgid "0.8.0"
+msgstr "0.8.0"
+
+#: ../../../CHANGES:376
+msgid "Binding annotations are removed. Use :func:`~injector.Key` to create unique types instead."
+msgstr "バインディングアノテーションは削除されました。代わりに :func:`~injector.Key` を使用して一意の型を作成してください。"
+
+#: ../../../CHANGES:380
+msgid "0.7.9"
+msgstr "0.7.9"
+
+#: ../../../CHANGES:382
+msgid "Fixed regression with injecting unbound key resulting in None instead of raising an exception"
+msgstr "未バインドキーを注入すると例外を発生させる代わりに None が返されるリグレッションを修正しました"
+
+#: ../../../CHANGES:386
+msgid "0.7.8"
+msgstr "0.7.8"
+
+#: ../../../CHANGES:388
+msgid "Exception is raised when :class:`~injector.Injector` can't install itself into a class instance due to __slots__ presence"
+msgstr "__slots__ が存在するために :class:`~injector.Injector` がクラスインスタンスに自身をインストールできない場合に例外が発生するようになりました"
+
+#: ../../../CHANGES:389
+msgid "Some of exception messages are now more detailed to make debugging easier when injection fails"
+msgstr "注入が失敗した場合のデバッグを容易にするために、一部の例外メッセージがより詳細になりました"
+
+#: ../../../CHANGES:390
+msgid "You can inject functions now - :class:`~injector.Injector` provides a wrapper that takes care of injecting dependencies into the original function"
+msgstr "関数を注入できるようになりました - :class:`~injector.Injector` は、元の関数への依存関係の注入を処理するラッパーを提供します"
+
+#: ../../../CHANGES:393
+msgid "0.7.7"
+msgstr "0.7.7"
+
+#: ../../../CHANGES:395
+msgid "Made :class:`~injector.AssistedBuilder` behave more explicitly: it can build either innstance of a concrete class (``AssistedBuilder(cls=Class)``) or it will follow Injector bindings (if exist) and construct instance of a class pointed by an interface (``AssistedBuilder(interface=Interface)``). ``AssistedBuilder(X)`` behaviour remains the same, it's equivalent to ``AssistedBuilder(interface=X)``"
+msgstr ":class:`~injector.AssistedBuilder` の動作をより明示的にしました:具象クラスのインスタンスをビルドするか (``AssistedBuilder(cls=Class)``)、Injector バインディング (存在する場合) に従ってインターフェースによってポイントされたクラスのインスタンスを構築します (``AssistedBuilder(interface=Interface)``)。``AssistedBuilder(X)`` の動作は同じままで、``AssistedBuilder(interface=X)`` と同等です"
+
+#: ../../../CHANGES:398
+msgid "0.7.6"
+msgstr "0.7.6"
+
+#: ../../../CHANGES:400
+msgid "Auto-convert README.md to RST for PyPi."
+msgstr "PyPI 用に README.md を RST に自動変換します。"
+
+#: ../../../CHANGES:403
+msgid "0.7.5"
+msgstr "0.7.5"
+
+#: ../../../CHANGES:405
+msgid "Added a ChangeLog!"
+msgstr "変更履歴を追加しました！"
+
+#: ../../../CHANGES:406
+msgid "Added support for using Python3 annotations as binding types."
+msgstr "バインディング型として Python3 アノテーションを使用するサポートを追加しました。"
+

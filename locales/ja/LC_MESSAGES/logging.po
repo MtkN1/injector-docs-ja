@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2013, Alec Thomas
+# This file is distributed under the same license as the Injector package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Injector 0.22.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-15 11:35+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.14.0\n"
+
+#: ../../logging.rst:2
+msgid "Logging"
+msgstr "ロギング"
+
+#: ../../logging.rst:4
+msgid "Injector uses standard :mod:`logging` module, the logger name is ``injector``."
+msgstr "Injector は標準の :mod:`logging` モジュールを使用し、ロガー名は ``injector`` です。"
+
+#: ../../logging.rst:6
+msgid "By default ``injector`` logger is not configured to print logs anywhere."
+msgstr "デフォルトでは、``injector`` ロガーはどこにもログを出力するように設定されていません。"
+
+#: ../../logging.rst:8
+msgid "To enable ``get()`` tracing (and some other useful information) you need to set ``injector`` logger level to ``DEBUG``. You can do that by executing::"
+msgstr "``get()`` トレース (およびその他の役立つ情報) を有効にするには、``injector`` ロガーレベルを ``DEBUG`` に設定する必要があります。これは次のように実行することで実行できます::"
+
+#: ../../logging.rst:14
+msgid "or by configuring :mod:`logging` module in any other way."
+msgstr "または、他の方法で :mod:`logging` モジュールを設定します。"
+
