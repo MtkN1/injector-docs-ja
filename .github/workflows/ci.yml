@@ -28,7 +28,6 @@ jobs:
               -M html \
               build/injector/docs/ \
               build/injector/docs/_build/ \
-              -aE \
               -D language=ja
       - uses: actions/upload-pages-artifact@v3
         with:
